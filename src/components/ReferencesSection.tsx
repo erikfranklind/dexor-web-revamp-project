@@ -1,34 +1,23 @@
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Image } from "lucide-react";
 
-// Byt ut bildvägarna till faktiska filnamn om de är annorlunda!
+// Nya referensbilder tillagda
 const images = [
   {
-    src: "/uploads/photo-1.jpg",
-    alt: "Referens 1: Renovering av källare",
-    caption: "Källarrenovering – Stockholm 2023"
+    src: "/lovable-uploads/14cb31e2-a839-4f22-b0e7-5ced3166d85a.png",
+    alt: "Referens 1: Stadsgata, modernisering",
+    caption: "Ombyggnad av fastighet och fuktskydd – Stockholm City"
   },
   {
-    src: "/uploads/photo-2.jpg",
-    alt: "Referens 2: Golvläggning i villa",
-    caption: "Golvläggning i villa – Täby"
+    src: "/lovable-uploads/9f55df6e-cdc5-436d-bbdc-2916ddcbbc62.png",
+    alt: "Referens 2: Sjukhusområde uppifrån",
+    caption: "Fuktentreprenad & tätskikt – Storsjukhus"
   },
   {
-    src: "/uploads/photo-3.jpg",
-    alt: "Referens 3: Tätskikt badrum",
-    caption: "Tätskikt & ytskikt – Bromma"
-  },
-  {
-    src: "/uploads/photo-4.jpg",
-    alt: "Referens 4: Industrihall",
-    caption: "Fuktspärr industrigolv – Södertälje"
-  },
-  {
-    src: "/uploads/photo-5.jpg",
-    alt: "Referens 5: Lägenhetsrenovering",
-    caption: "Totalentreprenad – Vasastan"
+    src: "/lovable-uploads/2581f0ed-c90d-495b-95c7-eeeb5fb82ea3.png",
+    alt: "Referens 3: Vit offentlig byggnad vid kväll",
+    caption: "Renovering av kulturbyggnad – Tätskikt & fasad"
   }
 ];
 
@@ -46,19 +35,12 @@ const ReferencesSection = () => {
           {images.map((img, idx) => (
             <Card key={idx} className="overflow-hidden group hover:shadow-lg transition-shadow">
               <div className="relative h-56 bg-gray-100 dark:bg-dexor-900 flex items-center justify-center">
-                {/* Om bilden saknas visas en ikon */}
                 <img
                   src={img.src}
                   alt={img.alt}
                   className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = "";
-                    (e.target as HTMLImageElement).alt = "Bild saknas";
-                  }}
                 />
-                {/* Lägg till en fallback-icon över bilden om den inte finns */}
-                {/* Kan tas bort om alla bilder alltid funkar */}
               </div>
               <CardContent className="pt-4">
                 <div className="text-base font-semibold text-dexor-800 dark:text-dexor-200">{img.caption}</div>
@@ -72,4 +54,3 @@ const ReferencesSection = () => {
 };
 
 export default ReferencesSection;
-

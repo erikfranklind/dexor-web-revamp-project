@@ -2,16 +2,18 @@
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Wrench } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const TestTabsSection = () => {
   return (
-    <section className="py-0 bg-white">
+    <section className="py-0 bg-white w-full">
       <div className="max-w-7xl mx-auto">
         <Tabs defaultValue="hem" className="w-full">
-          <TabsList className="mb-4 grid grid-cols-2 bg-white border-b border-gray-200">
+          <TabsList className="mb-4 grid grid-cols-2 bg-white border-b border-gray-200 w-full">
             <TabsTrigger value="hem" className="text-lg py-3 border-b-2 border-transparent data-[state=active]:border-dexor-500 data-[state=active]:text-dexor-500 rounded-none">Hem</TabsTrigger>
             <TabsTrigger value="fukt" className="text-lg py-3 border-b-2 border-transparent data-[state=active]:border-dexor-500 data-[state=active]:text-dexor-500 rounded-none">Fukt och lukt</TabsTrigger>
           </TabsList>
+          
           <TabsContent value="hem" className="px-0">
             <img 
               src="/lovable-uploads/1753d470-17bc-43ed-ad6b-1e989d89b4c0.png" 
@@ -19,6 +21,7 @@ const TestTabsSection = () => {
               className="w-full border" 
             />
           </TabsContent>
+          
           <TabsContent value="fukt" className="px-0">
             <div className="mt-8 space-y-8">
               <img 
@@ -60,12 +63,12 @@ const TestTabsSection = () => {
               </div>
               
               <div className="flex gap-4 mt-6">
-                <a href="#" className="px-6 py-3 bg-red-500 text-white rounded-md hover:bg-red-600 transition-colors">
+                <Button className="bg-red-500 hover:bg-red-600 text-white">
                   Kontakta oss
-                </a>
-                <a href="#" className="px-6 py-3 border border-red-500 text-red-500 rounded-md hover:bg-red-50 transition-colors">
+                </Button>
+                <Button variant="outline" className="border-red-500 text-red-500 hover:bg-red-50">
                   Våra tjänster
-                </a>
+                </Button>
               </div>
             </div>
           </TabsContent>

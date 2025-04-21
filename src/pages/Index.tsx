@@ -15,7 +15,6 @@ const Index = () => {
       <Header />
       <main className="flex-1">
         <TestTabsSection />
-        <HeroSection />
         <ServicesSection />
         <AboutSection />
         <ReferencesSection />

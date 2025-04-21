@@ -2,28 +2,29 @@
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Wrench } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const TestTabsSection = () => {
   return (
-    <section className="py-0 bg-white border-b border-red-500">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-0 bg-white">
+      <div className="w-full mx-auto">
         <Tabs defaultValue="fukt" className="w-full">
-          <TabsList className="mb-4 grid grid-cols-2 bg-white border-b border-gray-200 w-full">
+          <TabsList className="flex w-full bg-white border-b border-gray-200">
             <TabsTrigger 
               value="hem" 
-              className="text-lg py-3 border-b-2 border-transparent data-[state=active]:border-[#1EAEDB] data-[state=active]:text-[#1EAEDB] rounded-none"
+              className="flex-1 text-lg py-3 border-b-2 border-transparent data-[state=active]:border-[#1EAEDB] data-[state=active]:text-[#1EAEDB] rounded-none"
             >
               Hem
             </TabsTrigger>
             <TabsTrigger 
               value="fukt" 
-              className="text-lg py-3 border-b-2 border-transparent data-[state=active]:border-[#1EAEDB] data-[state=active]:text-[#1EAEDB] rounded-none"
+              className="flex-1 text-lg py-3 border-b-2 border-transparent data-[state=active]:border-[#1EAEDB] data-[state=active]:text-[#1EAEDB] rounded-none"
             >
               Fukt och lukt
             </TabsTrigger>
           </TabsList>
           
-          <TabsContent value="hem" className="px-0">
+          <TabsContent value="hem" className="px-4 max-w-7xl mx-auto">
             <div className="py-6">
               <img 
                 src="/lovable-uploads/1753d470-17bc-43ed-ad6b-1e989d89b4c0.png" 
@@ -33,15 +34,9 @@ const TestTabsSection = () => {
             </div>
           </TabsContent>
           
-          <TabsContent value="fukt" className="px-0">
-            <div className="py-6">
-              <img 
-                src="/lovable-uploads/c7e2d877-5452-4bd1-8a35-ab5800c4f4fd.png" 
-                alt="Bild för Fukt och lukt-fliken" 
-                className="w-full h-auto border" 
-              />
-              
-              <div className="my-12 flex flex-col md:flex-row md:gap-12 items-start">
+          <TabsContent value="fukt" className="px-4 max-w-7xl mx-auto">
+            <div className="py-12">
+              <div className="flex flex-col md:flex-row md:gap-12 items-start">
                 <div className="md:w-1/2 space-y-8">
                   <div className="flex items-center mb-4">
                     <Wrench className="w-10 h-10 text-[#ea384c] mr-4" />
@@ -76,18 +71,17 @@ const TestTabsSection = () => {
                   </div>
                   
                   <div className="flex gap-4 mt-6">
-                    <a 
-                      href="#kontakt" 
-                      className="inline-flex items-center justify-center px-6 py-3 bg-[#ea384c] hover:bg-red-600 text-white rounded-md transition-colors"
+                    <Button 
+                      className="bg-[#ea384c] hover:bg-red-600 text-white"
                     >
                       Kontakta oss
-                    </a>
-                    <a 
-                      href="#tjanster" 
-                      className="inline-flex items-center justify-center px-6 py-3 border border-[#ea384c] text-[#ea384c] hover:bg-red-50 rounded-md transition-colors"
+                    </Button>
+                    <Button 
+                      variant="outline"
+                      className="border-[#ea384c] text-[#ea384c] hover:bg-red-50"
                     >
                       Våra tjänster
-                    </a>
+                    </Button>
                   </div>
                 </div>
                 

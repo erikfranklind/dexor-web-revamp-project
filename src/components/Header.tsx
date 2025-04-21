@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Wrench } from 'lucide-react';
+import PreviewButton from './PreviewButton';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,11 +38,12 @@ const Header = () => {
             />
           </a>
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-4">
             <a href="#services" className="text-[#1EAEDB] font-semibold hover:text-[#EA384C] transition-colors">Tjänster</a>
             <a href="#about" className="text-[#1EAEDB] font-semibold hover:text-[#EA384C] transition-colors">Om oss</a>
             <a href="#references" className="text-[#1EAEDB] font-semibold hover:text-[#EA384C] transition-colors">Referenser</a>
             <a href="#contact" className="text-[#1EAEDB] font-semibold hover:text-[#EA384C] transition-colors">Kontakt</a>
+            <PreviewButton />
             <Button className="bg-[#EA384C] hover:bg-[#1EAEDB] text-white font-bold px-5 py-2">
               <Wrench className="mr-2" /> Begär offert
             </Button>
@@ -69,6 +71,7 @@ const Header = () => {
             <a href="#contact" className="block text-[#1EAEDB] font-semibold hover:text-[#EA384C] transition-colors" onClick={() => setMobileMenuOpen(false)}>
               Kontakt
             </a>
+            <PreviewButton />
             <Button className="w-full bg-[#EA384C] hover:bg-[#1EAEDB] text-white font-bold">
               <Wrench className="mr-2" /> Begär offert
             </Button>

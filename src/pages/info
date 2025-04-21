@@ -1,0 +1,94 @@
+// src/pages/info.tsx
+import React, { useState } from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+
+const sections = [
+  {
+    id: 'fukt-lukt',
+    title: 'Fukt & Lukt',
+    content: `
+## Alkalispärr (fukt)
+DexorBond skyddar lim och matta mot fukt från undergolv. Den hindrar limförtvålning och emissioner som kan skada inomhusmiljön.
+
+## Emissionsspärr (lukt)
+Stoppar emissioner från undergolvet att nå inomhusluften och minskar risken för ohälsa, irritation, astma och allergi.
+
+## Funktion
+- Beständig mot högt pH
+- Testad enligt SP-metod 1310
+- Ånggenomsläpplig men vattenavvisande
+- Kan appliceras på underlag med upp till 100% RF
+
+## Utförande
+- Härdar på ca 10 timmar och är då redo för lim och matta
+
+## Appliceringsanvisningar
+**Underlag:** Rent, fritt från föroreningar som gamla limrester etc.
+
+**Blandning:** Blandas exakt i två steg, brukstid ca 30 minuter
+
+**Applicering:**
+- Fuktspärr: 0,2 mm skikttjocklek
+- Emissionsspärr: 0,4 mm skikttjocklek
+- Rumstemperatur: ca 20 °C
+
+## Åtgång och Förvaring
+- 1 kg räcker till cirka 4,5 m² i ett skikt
+- Hållbar i 2 år oöppnad, förvaras i 20 °C
+
+## Arbetshygien
+- Följ AFS (Arbetsmiljöverkets föreskrifter)
+- Använd skyddsoverall, handskar och skyddsglasögon
+
+## Spackel och Avjämningsmassa
+- DexorBond fungerar också som primer vid hög fukt
+
+## Garanti
+- 10 års garanti vid korrekt applicering enligt Dexors anvisningar
+    `,
+  },
+  // ... (övriga sektioner lämnas som tidigare för nu)
+];
+
+const InfoPage = () => {
+  const [activeSection, setActiveSection] = useState(sections[0].id);
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <div className="flex flex-1">
+        <aside className="w-64 border-r border-gray-200 p-4">
+          <nav className="space-y-2">
+            {sections.map((section) => (
+              <button
+                key={section.id}
+                onClick={() => setActiveSection(section.id)}
+                className={`block text-left w-full px-4 py-2 rounded-lg hover:bg-gray-100 transition ${
+                  activeSection === section.id ? 'bg-gray-200 font-semibold' : ''
+                }`}
+              >
+                {section.title}
+              </button>
+            ))}
+          </nav>
+        </aside>
+
+        <main className="flex-1 p-8 prose max-w-3xl">
+          {sections.map(
+            (section) =>
+              section.id === activeSection && (
+                <section key={section.id}>
+                  <h1>{section.title}</h1>
+                  <div dangerouslySetInnerHTML={{ __html: section.content.replace(/\n/g, '<br/>') }} />
+                </section>
+              )
+          )}
+        </main>
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default InfoPage;

@@ -35,16 +35,16 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#services" className="text-gray-700 hover:text-dexor-600 dark:text-gray-300 dark:hover:text-dexor-400 transition-colors">
-              Services
+              Tjänster
             </a>
             <a href="#about" className="text-gray-700 hover:text-dexor-600 dark:text-gray-300 dark:hover:text-dexor-400 transition-colors">
-              About
+              Om oss
             </a>
             <a href="#contact" className="text-gray-700 hover:text-dexor-600 dark:text-gray-300 dark:hover:text-dexor-400 transition-colors">
-              Contact
+              Kontakt
             </a>
             <Button className="bg-dexor-600 hover:bg-dexor-700 text-white">
-              Get Started
+              Begär offert
             </Button>
           </nav>
 
@@ -64,24 +64,24 @@ const Header = () => {
               className="block text-gray-700 hover:text-dexor-600 dark:text-gray-300 dark:hover:text-dexor-400"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Services
+              Tjänster
             </a>
             <a 
               href="#about" 
               className="block text-gray-700 hover:text-dexor-600 dark:text-gray-300 dark:hover:text-dexor-400"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About
+              Om oss
             </a>
             <a 
               href="#contact" 
               className="block text-gray-700 hover:text-dexor-600 dark:text-gray-300 dark:hover:text-dexor-400"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Contact
+              Kontakt
             </a>
             <Button className="w-full bg-dexor-600 hover:bg-dexor-700 text-white">
-              Get Started
+              Begär offert
             </Button>
           </div>
         </div>

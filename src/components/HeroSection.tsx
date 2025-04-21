@@ -9,17 +9,17 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              <span className="gradient-text">Cybersecurity</span> Experts
+              <span className="gradient-text">Fuktskydd</span> & Golvlösningar
             </h1>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-xl">
-              Protecting your digital assets with advanced security solutions. We provide comprehensive cybersecurity services to safeguard your business.
+              Specialister på fuktsäkra undergolv och professionella golvlösningar för alla typer av miljöer.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-dexor-600 hover:bg-dexor-700 text-white text-lg px-6 py-6">
-                Get Started
+                Kontakta oss
               </Button>
               <Button variant="outline" className="border-dexor-600 text-dexor-600 hover:bg-dexor-50 text-lg px-6 py-6">
-                Learn More
+                Våra tjänster
               </Button>
             </div>
           </div>

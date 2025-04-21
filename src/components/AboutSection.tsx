@@ -11,14 +11,14 @@ const AboutSection = () => {
             <div className="relative bg-gradient-to-tr from-dexor-100 to-dexor-50 dark:from-dexor-900 dark:to-dexor-800 p-8 rounded-2xl overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-10"></div>
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-dexor-800 dark:text-dexor-200 mb-6">Why Choose DEXOR</h3>
+                <h3 className="text-2xl font-bold text-dexor-800 dark:text-dexor-200 mb-6">Varför välja DEXOR</h3>
                 <ul className="space-y-4">
                   {[
-                    'Experienced security professionals',
-                    'Tailored security solutions',
-                    'Cutting-edge security tools',
-                    '24/7 support and monitoring',
-                    'Compliant with industry standards'
+                    'Certifierade fuktsakkunniga',
+                    'Skräddarsydda lösningar för varje projekt',
+                    'Moderna material och tekniker',
+                    'Fokus på kvalitet och hållbarhet',
+                    'Lång erfarenhet av entreprenad'
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
                       <span className="bg-dexor-500 text-white rounded-full p-1 mr-3 mt-1">
@@ -35,15 +35,15 @@ const AboutSection = () => {
           </div>
           
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">About DEXOR</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Om DEXOR</h2>
             <p className="text-gray-600 dark:text-gray-300">
-              DEXOR is a leading cybersecurity consulting firm dedicated to helping businesses protect their digital assets. With years of experience in the industry, we understand the evolving threat landscape and provide solutions that keep you one step ahead of potential threats.
+              DEXOR är ett ledande företag inom fuktskydd och golvlösningar med stor erfarenhet av entreprenad. Vi har specialiserat oss på att skapa fuktsäkra undergolv och installera högkvalitativa golvbeläggningar i olika miljöer.
             </p>
             <p className="text-gray-600 dark:text-gray-300">
-              Our team of certified security professionals works closely with you to understand your unique security challenges and develop strategies that align with your business objectives. We believe in building long-term partnerships with our clients, providing ongoing support and guidance to ensure your security posture remains strong.
+              Vårt team av certifierade fuktsakkunniga och erfarna hantverkare arbetar tätt tillsammans med dig för att leverera skräddarsydda lösningar som möter dina specifika behov. Vi tror på att bygga långsiktiga relationer med våra kunder genom att erbjuda kvalitetstjänster och pålitligt stöd genom hela byggprocessen.
             </p>
             <Button className="bg-dexor-600 hover:bg-dexor-700 text-white">
-              Learn More About Us
+              Läs mer om oss
             </Button>
           </div>
         </div>
